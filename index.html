@@ -29,7 +29,7 @@
 
     <main class="max-w-6xl mx-auto p-4 md:p-6 space-y-12 flex-grow">
         
-        <!-- Cards Section (Cleaned / Ready for New Content) -->
+        <!-- Tour Packages Section -->
         <section>
             <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">लोकप्रिय यात्रा गाइड (Tour Packages)</h2>
             <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center text-gray-500">
@@ -49,7 +49,7 @@
             </div>
         </section>
 
-        <!-- New Attractive About Us Section -->
+        <!-- About Us Section -->
         <section id="about" class="bg-gradient-to-br from-indigo-50 to-white p-6 md:p-10 rounded-2xl shadow-sm border border-indigo-100 scroll-mt-20">
             <div class="max-w-3xl">
                 <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-100 px-3 py-1 rounded-full">हमारे बारे में</span>
@@ -58,10 +58,9 @@
                     स्वागत है <strong>Your Tour Guide</strong> में! हम मानते हैं कि यात्रा सिर्फ एक जगह से दूसरी जगह जाना नहीं, बल्कि नए अनुभवों और अविस्मरणीय यादों को संजोना है। 
                 </p>
                 <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-8">
-                    चाहे पहाड़ों की शांत वादियां हों, पवित्र तीर्थ स्थल हों या अनछुपे हुए खूबसूरत टूरिस्ट स्पॉट्स—हम आपके लिए लाते हैं एकदम सटीक रोडमैप, असली ट्रैवेल टिप्स, होटल बुकिंग सलाह और बजट फ्रेंडली गाइड्स। हमारा लक्ष्य आपकी हर यात्रा को सुरक्षित, आसान और खास बनाना है।
+                    चाहे पहाड़ों की शांत वादियां हों, पवित्र तीर्थ स्थल हों या अनछुपे हुए खूबसूरत टूरिस्ट स्पॉट्स—हम आपके लिए लाते हैं एकदम सटीक रोडमैप, असली ट्रैवेल टिप्स, होटल बुकिंग सलाह और बजट फ्रेंडली गाइड्स।
                 </p>
 
-                <!-- Features Highlights Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 border-t border-indigo-100">
                     <div class="flex items-start space-x-3">
                         <div class="p-2 bg-indigo-600 text-white rounded-lg text-lg">📍</div>
@@ -88,24 +87,42 @@
             </div>
         </section>
 
-        <!-- Contact Us Section -->
+        <!-- Working Contact Section with Netlify Form & WhatsApp -->
         <section id="contact" class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 scroll-mt-20">
             <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">संपर्क करें (Contact Us)</h2>
-            <form class="max-w-xl space-y-4">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">आपका नाम</label>
-                    <input type="text" placeholder="अपना नाम लिखें" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Netlify Form -->
+                <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">आपका नाम</label>
+                        <input type="text" name="name" required placeholder="अपना नाम लिखें" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">ईमेल</label>
+                        <input type="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">संदेश</label>
+                        <textarea name="message" rows="4" required placeholder="अपना सवाल या संदेश यहाँ लिखें..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow">संदेश भेजें</button>
+                </form>
+
+                <!-- WhatsApp & Quick Contact Box -->
+                <div class="bg-green-50 p-6 rounded-xl border border-green-200 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-green-900 mb-2">तुरंत सहायता के लिए 👋</h3>
+                        <p class="text-sm text-green-800 leading-relaxed mb-6">
+                            अगर आपका कोई सवाल है या आप तुरंत यात्रा की जानकारी चाहते हैं, तो सीधे हमारे WhatsApp पर मैसेज कर सकते हैं!
+                        </p>
+                    </div>
+                    <a href="https://wa.me/919411255003?text=Hello!%20Mujhe%20Tour%20Guide%20ke%20bare%20me%20jaankari%20chahiye." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition shadow-lg">
+                        <span>💬 WhatsApp पर मैसेज करें</span>
+                    </a>
                 </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">ईमेल</label>
-                    <input type="email" placeholder="example@email.com" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">संदेश</label>
-                    <textarea rows="4" placeholder="अपना सवाल या संदेश यहाँ लिखें..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
-                </div>
-                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition">संदेश भेजें</button>
-            </form>
+            </div>
         </section>
 
     </main>
