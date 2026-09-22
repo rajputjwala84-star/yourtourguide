@@ -11,7 +11,6 @@
     <!-- Navigation Bar -->
     <nav class="bg-indigo-700 text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            
             <a href="#home" class="flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
@@ -32,135 +31,149 @@
         </div>
     </nav>
 
-    <!-- Header / Home Section -->
-    <header id="home" class="bg-indigo-600 text-white text-center py-12 px-4 shadow-inner">
+    <!-- Header -->
+    <header id="home" class="bg-indigo-600 text-white text-center py-10 px-4 shadow-inner">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Your Tour Guide</h1>
-            <p class="text-base md:text-lg mt-2 text-indigo-100 font-light">Bharat Ke Behtareen Aur Offbeat Yatra Guide</p>
+            <p class="text-base md:text-lg mt-2 text-indigo-100 font-light">भारत के बेहतरीन और अनूठे पर्यटन स्थल</p>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto p-4 md:p-6 space-y-12 flex-grow">
         
-        <!-- Blog Section -->
+        <!-- Blogs Section -->
         <section id="blogs" class="scroll-mt-20">
-            
-            <!-- Main Title & Shayari Header -->
-            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 mb-8 text-center">
-                <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-50 px-3 py-1 rounded-full">Destination Guide</span>
-                <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Welcome to your guide for Orchha 🏰✨</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">नवीनतम ब्लॉग (Latest Blogs)</h2>
+
+            <!-- Orchha Blog Preview Card -->
+            <div id="orchha-card" class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 max-w-3xl mx-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orchha_Jehangir_Mahal.jpg/1280px-Orchha_Jehangir_Mahal.jpg" alt="Orchha Jahangir Mahal Fort" class="h-64 md:h-72 w-full object-cover">
                 
-                <!-- Shayari Block -->
-                <div class="max-w-2xl mx-auto bg-amber-50/60 border-l-4 border-amber-500 p-4 rounded-r-lg text-gray-700 italic text-sm md:text-base leading-relaxed text-center">
-                    "Raja ram ki nagari hai, betwa ka shant kinara hai,<br>
-                    Orcha ke har ek patthar me, itihas ka sangeet pyara hai.<br>
-                    Chhatriyon ki parchhai jab pani me lahrati hai,<br>
-                    Ye shahar nahi saheb, ek khubsoorat afsana lagta hai." 🚩🌊
+                <div class="p-6 md:p-8">
+                    <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-50 px-3 py-1 rounded-full">Destination Guide</span>
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-3 mb-4">Welcome to your guide for Orchha 🏰✨</h3>
+                    
+                    <!-- Selected Hindi Shayari -->
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg text-gray-800 font-medium text-sm md:text-base leading-relaxed mb-6">
+                        "बेतवा के किनारे बैठकर, ढलती शाम देखना,<br>
+                        ओरछा आकर राम-राजा का दरबार देखना।<br>
+                        सुकून ढूँढने अगर निकले हो शहर की भीड़ से,<br>
+                        तो यहाँ के पत्थरों में छुपकर बैठा इतिहास देखना।" 🚩🌊🏰
+                    </div>
+
+                    <p class="text-gray-600 text-sm md:text-base mb-6">
+                        ओरछा बुंदेलखंड का एक ऐतिहासिक शहर है जो अपने भव्य किलों, बेतवा नदी के तटों और ऐतिहासिक श्री राम राजा मंदिर के लिए प्रसिद्ध है। जानिए यहाँ घूमने की सबसे बेहतरीन जगहों के बारे में...
+                    </p>
+
+                    <button onclick="document.getElementById('orchha-full-blog').classList.remove('hidden'); document.getElementById('orchha-card').classList.add('hidden');" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-6 rounded-lg transition shadow">
+                        पूरा पढ़ें (Read Full Guide) →
+                    </button>
                 </div>
             </div>
 
-            <!-- Blog Places Detailed List -->
-            <div class="space-y-8">
+            <!-- Orchha Full Blog Content (Hidden by default, shows on click) -->
+            <div id="orchha-full-blog" class="hidden space-y-8 max-w-4xl mx-auto">
                 
+                <div class="flex justify-between items-center bg-indigo-50 p-4 rounded-xl border border-indigo-100 mb-6">
+                    <span class="font-bold text-indigo-900">ओरछा यात्रा मार्गदर्शिका (Orchha Full Guide)</span>
+                    <button onclick="document.getElementById('orchha-full-blog').classList.add('hidden'); document.getElementById('orchha-card').classList.remove('hidden');" class="text-xs bg-indigo-600 text-white px-3 py-1.5 rounded-md hover:bg-indigo-700">
+                        ← वापस जाएं (Back to Card)
+                    </button>
+                </div>
+
+                <!-- Title & Shayari Header -->
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 text-center">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">Welcome to your guide for Orchha 🏰✨</h2>
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg text-gray-800 font-medium text-sm md:text-base leading-relaxed text-center max-w-2xl mx-auto">
+                        "बेतवा के किनारे बैठकर, ढलती शाम देखना,<br>
+                        ओरछा आकर राम-राजा का दरबार देखना।<br>
+                        सुकून ढूँढने अगर निकले हो शहर की भीड़ से,<br>
+                        तो यहाँ के पत्थरों में छुपकर बैठा इतिहास देखना।" 🚩🌊🏰
+                    </div>
+                </div>
+
+                <!-- Places Detailed List -->
                 <!-- Place 1: Ram Raja Temple -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1600100397608-f010f423b971?auto=format&fit=crop&w=800&q=80" alt="Shri Ram Raja Temple Orchha" class="h-64 md:h-full w-full object-cover">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orchha_Jehangir_Mahal.jpg/800px-Orchha_Jehangir_Mahal.jpg" alt="Shri Ram Raja Temple Complex Orchha" class="h-64 md:h-full w-full object-cover">
                     <div class="p-6 flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">1. Dharmik Sthal</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Shri Ram Raja Temple (श्री राम राजा मंदिर)</h3>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">1. धार्मिक स्थल</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">श्री राम राजा मंदिर (Shri Ram Raja Temple)</h3>
                             <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                                Duniya ka iklauta aisa mandir jahan bhagwan ram ko bhagwan ke roop me nahi balki 'raja' ke roop me pooja jata hai. Yahan madhya pradesh police dwara pratidin bhagwan ram ko 'guard of honour' (sashastra salami) diya jata hai.
+                                दुनिया का इकलौता ऐसा मंदिर जहाँ भगवान राम की पूजा भगवान के रूप में नहीं बल्कि 'राजा' के रूप में की जाती है। यहाँ मध्य प्रदेश पुलिस द्वारा प्रतिदिन 'गार्ड ऑफ ऑनर' (सशस्त्र सलामी) दी जाती है।
                             </p>
                         </div>
-                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                            <span>⏱️ Darshan Time: 8:00 AM - 12:30 PM, 8:00 PM - 10:30 PM</span>
+                        <div class="pt-3 border-t border-gray-100 text-xs text-gray-500">
+                            ⏱️ दर्शन का समय: सुबह 8:00 - 12:30, रात 8:00 - 10:30
                         </div>
                     </div>
                 </div>
 
-                <!-- Place 2: Jahangir Mahal & Fort -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300 md:flex-row-reverse">
-                    <div class="p-6 flex flex-col justify-between order-2 md:order-1">
+                <!-- Place 2: Jahangir Mahal -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orchha_Jehangir_Mahal.jpg/1280px-Orchha_Jehangir_Mahal.jpg" alt="Jahangir Mahal Orchha Fort" class="h-64 md:h-full w-full object-cover md:order-2">
+                    <div class="p-6 flex flex-col justify-between md:order-1">
                         <div>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">2. Aitihasik Mahal</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Orchha Fort & Jahangir Mahal (ओरछा किला एवं जहांगीर महल)</h3>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">2. ऐतिहासिक महल</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">ओरछा किला एवं जहांगीर महल (Jahangir Mahal)</h3>
                             <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                                Raja bir singh dev dwara 17th century me mughal samrat jahangir ke swagat ke liye banaya gaya ye mahal bundela vastukala ka bejod namuna hai. Isme barik jaliyan, gumbad aur shahi jharokhe bane hue hain.
+                                राजा बीर सिंह देव द्वारा मुगल सम्राट जहांगीर के स्वागत में बनवाया गया यह महल बुंदेला वास्तुकला का बेजोड़ नमूना है। इसमें बारीक जालियां, गुंबद और शाही झरोखे हैं।
                             </p>
                         </div>
-                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                            <span>🏛️ Entry Fee Applicable</span>
+                        <div class="pt-3 border-t border-gray-100 text-xs text-gray-500">
+                            🏛️ टिकट शुल्क लागू
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80" alt="Jahangir Mahal Orchha Fort" class="h-64 md:h-full w-full object-cover order-1 md:order-2">
                 </div>
 
-                <!-- Place 3: Betwa Cenotaphs -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Betwa River Chhatris Orchha" class="h-64 md:h-full w-full object-cover">
+                <!-- Place 3: Royal Chhatris -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Royal_Chhatris_of_Orchha.jpg/1280px-Royal_Chhatris_of_Orchha.jpg" alt="Royal Chhatris Betwa River Orchha" class="h-64 md:h-full w-full object-cover">
                     <div class="p-6 flex flex-col justify-between">
                         <div>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">3. River View & Ghat</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Royal Cenotaphs - Chhatris (बेतवा नदी की छतरियां)</h3>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">3. बेतवा तट</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">बेतवा नदी की छतरियां (Royal Cenotaphs)</h3>
                             <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                                Kanchana ghat ke kinare bani bundela rajaon ki 14 bhavya chhatriyan. Sham ke samay betwa nadi ke pani me inka pratibimb aur sunset ka nazara adbhut aur shant lagta hai.
+                                कंचना घाट के किनारे बनी बुंदेला राजाओं की 14 भव्य छतरियां। शाम को नदी के पानी में इनका प्रतिबिंब और सूर्यास्त का नजारा अद्भुत दिखता है।
                             </p>
                         </div>
-                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                            <span>🌅 Best Time: Sunset Hours</span>
+                        <div class="pt-3 border-t border-gray-100 text-xs text-gray-500">
+                            🌅 उत्तम समय: सूर्यास्त (Sunset)
                         </div>
                     </div>
                 </div>
 
                 <!-- Place 4: Chaturbhuj Temple -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300 md:flex-row-reverse">
-                    <div class="p-6 flex flex-col justify-between order-2 md:order-1">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Chaturbhuj_Temple%2C_Orchha.jpg/1280px-Chaturbhuj_Temple%2C_Orchha.jpg" alt="Chaturbhuj Temple Orchha" class="h-64 md:h-full w-full object-cover md:order-2">
+                    <div class="p-6 flex flex-col justify-between md:order-1">
                         <div>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">4. Prachin Mandir</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Chaturbhuj Temple (चतुर्भुज मंदिर)</h3>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">4. प्राचीन मंदिर</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">चतुर्भुज मंदिर (Chaturbhuj Temple)</h3>
                             <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                                Vishal minaron aur oonche chabutaron wala ye prachin mandir door se kisi kile jaisa dikhta hai. Iski balcony se poore orchha shahar aur jahangir mahal ka panoramic view milta hai.
+                                विशाल मीनारों वाला यह प्राचीन मंदिर दूर से किले जैसा दिखता है। इसकी बालकनी से पूरे ओरछा शहर का खूबसूरत नज़ारा दिखाई देता है।
                             </p>
                         </div>
-                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                            <span>📍 Near Ram Raja Temple</span>
-                        </div>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80" alt="Chaturbhuj Temple Orchha" class="h-64 md:h-full w-full object-cover order-1 md:order-2">
-                </div>
-
-                <!-- Place 5: Laxmi Narayan Temple -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Laxmi Narayan Temple Orchha" class="h-64 md:h-full w-full object-cover">
-                    <div class="p-6 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">5. Art & Wall Paintings</span>
-                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Laxmi Narayan Temple (लक्ष्मी नारायण मंदिर)</h3>
-                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
-                                Ek chhoti pahadi par sthit ye mandir apni anuthi vastukala aur deewaron par bani 17th-18th century ki pauranik v aitihasik bhittichitron (wall paintings) ke liye prasiddh hai.
-                            </p>
-                        </div>
-                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
-                            <span>🎨 Amazing Historical Murals</span>
+                        <div class="pt-3 border-t border-gray-100 text-xs text-gray-500">
+                            📍 राम राजा मंदिर के पास
                         </div>
                     </div>
                 </div>
 
-                <!-- Travel Tips & Budget Block -->
+                <!-- Travel Tips -->
                 <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 text-indigo-950">
-                    <h4 class="text-xl font-bold mb-3 flex items-center gap-2">
-                        <span>💡</span>
-                        <span>Travel Tips & Budget Guide (यात्रा सलाह)</span>
-                    </h4>
+                    <h4 class="text-xl font-bold mb-3">💡 यात्रा सलाह एवं बजट (Travel Tips)</h4>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm leading-relaxed">
-                        <div>
-                            <strong>Kab Jayein (Best Time):</strong> October se March ke beech mausam bahut suhavna rehta hai.
-                        </div>
-                        <div>
-                            <strong>Rukna & Khana:</strong> Betwa tat ke paas saste homestay, budget hotel aur swadisht bundeli vyanjan asani se mil jaate hain.
-                        </div>
+                        <div><strong>कब जाएँ:</strong> अक्टूबर से मार्च के बीच (सुहावना मौसम)।</div>
+                        <div><strong>रुकना व खाना:</strong> बेतवा तट के पास बजट होटल और स्वादिष्ट बुंदेली व्यंजन।</div>
                     </div>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button onclick="document.getElementById('orchha-full-blog').classList.add('hidden'); document.getElementById('orchha-card').classList.remove('hidden');" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">
+                        ← वापस ब्लॉग सूची पर जाएं
+                    </button>
                 </div>
 
             </div>
@@ -168,56 +181,56 @@
 
         <!-- Gallery Section -->
         <section id="gallery" class="scroll-mt-20">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">Gallery (गैलरी)</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">गैलरी (Gallery)</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80" alt="Mountains" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Landscape" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80" alt="Trekking Peaks" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Beach View" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Royal_Chhatris_of_Orchha.jpg/640px-Royal_Chhatris_of_Orchha.jpg" alt="Orchha Royal Chhatris" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orchha_Jehangir_Mahal.jpg/640px-Orchha_Jehangir_Mahal.jpg" alt="Jahangir Mahal Architecture" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Chaturbhuj_Temple%2C_Orchha.jpg/640px-Chaturbhuj_Temple%2C_Orchha.jpg" alt="Chaturbhuj Temple Top View" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orchha_Jehangir_Mahal.jpg/640px-Orchha_Jehangir_Mahal.jpg" alt="Orchha Fort Complex" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
             </div>
         </section>
 
         <!-- About Us Section -->
-        <section id="about" class="bg-gradient-to-br from-indigo-50 to-white p-6 md:p-10 rounded-2xl shadow-sm border border-indigo-100 scroll-mt-20">
+        <section id="about" class="bg-gradient-to-br from-indigo-50 to-white p-6 md:p-8 rounded-2xl shadow-sm border border-indigo-100 scroll-mt-20">
             <div class="max-w-3xl">
-                <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-100 px-3 py-1 rounded-full">Humare Baare Me</span>
-                <h2 class="text-3xl font-extrabold text-gray-900 mt-3 mb-4">Safar aapka, sahi margdarshan humara 🏔️✨</h2>
-                <p class="text-gray-700 text-base leading-relaxed mb-6">
-                    Swagat hai <strong>Your Tour Guide</strong> me! Hum maante hain ki yatra sirf ek jagah se doosri jagah jana nahi, balki naye anubhavon aur avismarniya yaadon ko sanjona hai.
+                <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-100 px-3 py-1 rounded-full">हमारे बारे में</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mt-3 mb-4">सफर आपका, सही मार्गदर्शन हमारा 🏔️✨</h2>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                    स्वागत है <strong>Your Tour Guide</strong> में! हम आपके लिए लाते हैं सटीक और आसान यात्रा गाइड्स।
                 </p>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">Sampark Karein (Contact Us)</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">संपर्क करें (Contact Us)</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <form name="contact" method="POST" data-netlify="true" class="space-y-4">
                     <input type="hidden" name="form-name" value="contact" />
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Aapka Naam</label>
-                        <input type="text" name="name" required placeholder="Apna naam likhein" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">आपका नाम</label>
+                        <input type="text" name="name" required placeholder="अपना नाम लिखें" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">ईमेल</label>
                         <input type="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Sandesh</label>
-                        <textarea name="message" rows="4" required placeholder="Apna sawal ya sandesh yahan likhein..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">संदेश</label>
+                        <textarea name="message" rows="3" required placeholder="अपना सवाल यहाँ लिखें..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow">Sandesh Bhejein</button>
+                    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow">संदेश भेजें</button>
                 </form>
 
                 <div class="bg-green-50 p-6 rounded-xl border border-green-200 flex flex-col justify-between">
                     <div>
-                        <h3 class="text-xl font-bold text-green-900 mb-2">Turant Sahayata Ke Liye 👋</h3>
+                        <h3 class="text-xl font-bold text-green-900 mb-2">तुरंत सहायता के लिए 👋</h3>
                         <p class="text-sm text-green-800 leading-relaxed mb-6">
-                            Agar aapka koi sawal hai ya aap turant yatra ki jaankari chahte hain, toh seedhe humare WhatsApp par message kar sakte hain!
+                            सीधे व्हाट्सएप पर संपर्क करें:
                         </p>
                     </div>
-                    <a href="https://wa.me/919411255003?text=Hello!%20Mujhe%20Orchha%20Tour%20Guide%20ke%20bare%20me%20jaankari%20chahiye." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition shadow-lg">
-                        <span>💬 WhatsApp Par Message Karein</span>
+                    <a href="https://wa.me/919411255003?text=Hello!%20Mujhe%20Orchha%20Tour%20Guide%20ke%20bare%20me%20jaankari%20chahiye." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition shadow">
+                        <span>💬 WhatsApp पर मैसेज करें</span>
                     </a>
                 </div>
             </div>
