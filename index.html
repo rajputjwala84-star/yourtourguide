@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Tour Guide</title>
+    <title>Your Tour Guide - Orchha</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col text-gray-800">
 
-    <!-- Navigation Bar with Minimal Clean Logo -->
+    <!-- Navigation Bar -->
     <nav class="bg-indigo-700 text-white sticky top-0 z-50 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             
-            <!-- Clean Logo Design -->
             <a href="#home" class="flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-amber-400" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
@@ -23,9 +22,9 @@
                 </div>
             </a>
 
-            <!-- Navigation Links -->
             <div class="space-x-4 text-sm font-medium">
                 <a href="#home" class="hover:text-indigo-200 transition">Home</a>
+                <a href="#blogs" class="hover:text-indigo-200 transition">Blogs</a>
                 <a href="#gallery" class="hover:text-indigo-200 transition">Gallery</a>
                 <a href="#about" class="hover:text-indigo-200 transition">About Us</a>
                 <a href="#contact" class="hover:text-indigo-200 transition">Contact</a>
@@ -37,24 +36,139 @@
     <header id="home" class="bg-indigo-600 text-white text-center py-12 px-4 shadow-inner">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Your Tour Guide</h1>
-            <p class="text-base md:text-lg mt-2 text-indigo-100 font-light">भारत के बेहतरीन और ऑफबीट यात्रा गाइड</p>
+            <p class="text-base md:text-lg mt-2 text-indigo-100 font-light">Bharat Ke Behtareen Aur Offbeat Yatra Guide</p>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto p-4 md:p-6 space-y-12 flex-grow">
         
-        <!-- Tour Packages Section -->
-        <section>
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">लोकप्रिय यात्रा गाइड (Tour Packages)</h2>
-            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center text-gray-500">
-                <p class="text-lg font-medium">जल्द ही नए यात्रा गाइड यहाँ जोड़े जाएंगे!</p>
-                <p class="text-sm mt-1">नई जगहों के रोमांचक रोडमैप और टिप्स जल्द उपलब्ध होंगे।</p>
+        <!-- Blog Section -->
+        <section id="blogs" class="scroll-mt-20">
+            
+            <!-- Main Title & Shayari Header -->
+            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 mb-8 text-center">
+                <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-50 px-3 py-1 rounded-full">Destination Guide</span>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mt-3 mb-4">Welcome to your guide for Orchha 🏰✨</h2>
+                
+                <!-- Shayari Block -->
+                <div class="max-w-2xl mx-auto bg-amber-50/60 border-l-4 border-amber-500 p-4 rounded-r-lg text-gray-700 italic text-sm md:text-base leading-relaxed text-center">
+                    "Raja ram ki nagari hai, betwa ka shant kinara hai,<br>
+                    Orcha ke har ek patthar me, itihas ka sangeet pyara hai.<br>
+                    Chhatriyon ki parchhai jab pani me lahrati hai,<br>
+                    Ye shahar nahi saheb, ek khubsoorat afsana lagta hai." 🚩🌊
+                </div>
+            </div>
+
+            <!-- Blog Places Detailed List -->
+            <div class="space-y-8">
+                
+                <!-- Place 1: Ram Raja Temple -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1600100397608-f010f423b971?auto=format&fit=crop&w=800&q=80" alt="Shri Ram Raja Temple Orchha" class="h-64 md:h-full w-full object-cover">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">1. Dharmik Sthal</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Shri Ram Raja Temple (श्री राम राजा मंदिर)</h3>
+                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                                Duniya ka iklauta aisa mandir jahan bhagwan ram ko bhagwan ke roop me nahi balki 'raja' ke roop me pooja jata hai. Yahan madhya pradesh police dwara pratidin bhagwan ram ko 'guard of honour' (sashastra salami) diya jata hai.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>⏱️ Darshan Time: 8:00 AM - 12:30 PM, 8:00 PM - 10:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Place 2: Jahangir Mahal & Fort -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300 md:flex-row-reverse">
+                    <div class="p-6 flex flex-col justify-between order-2 md:order-1">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">2. Aitihasik Mahal</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Orchha Fort & Jahangir Mahal (ओरछा किला एवं जहांगीर महल)</h3>
+                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                                Raja bir singh dev dwara 17th century me mughal samrat jahangir ke swagat ke liye banaya gaya ye mahal bundela vastukala ka bejod namuna hai. Isme barik jaliyan, gumbad aur shahi jharokhe bane hue hain.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>🏛️ Entry Fee Applicable</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80" alt="Jahangir Mahal Orchha Fort" class="h-64 md:h-full w-full object-cover order-1 md:order-2">
+                </div>
+
+                <!-- Place 3: Betwa Cenotaphs -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Betwa River Chhatris Orchha" class="h-64 md:h-full w-full object-cover">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">3. River View & Ghat</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Royal Cenotaphs - Chhatris (बेतवा नदी की छतरियां)</h3>
+                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                                Kanchana ghat ke kinare bani bundela rajaon ki 14 bhavya chhatriyan. Sham ke samay betwa nadi ke pani me inka pratibimb aur sunset ka nazara adbhut aur shant lagta hai.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>🌅 Best Time: Sunset Hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Place 4: Chaturbhuj Temple -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300 md:flex-row-reverse">
+                    <div class="p-6 flex flex-col justify-between order-2 md:order-1">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">4. Prachin Mandir</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Chaturbhuj Temple (चतुर्भुज मंदिर)</h3>
+                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                                Vishal minaron aur oonche chabutaron wala ye prachin mandir door se kisi kile jaisa dikhta hai. Iski balcony se poore orchha shahar aur jahangir mahal ka panoramic view milta hai.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>📍 Near Ram Raja Temple</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80" alt="Chaturbhuj Temple Orchha" class="h-64 md:h-full w-full object-cover order-1 md:order-2">
+                </div>
+
+                <!-- Place 5: Laxmi Narayan Temple -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-6 hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Laxmi Narayan Temple Orchha" class="h-64 md:h-full w-full object-cover">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-md">5. Art & Wall Paintings</span>
+                            <h3 class="text-2xl font-bold text-gray-900 mt-2 mb-3">Laxmi Narayan Temple (लक्ष्मी नारायण मंदिर)</h3>
+                            <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                                Ek chhoti pahadi par sthit ye mandir apni anuthi vastukala aur deewaron par bani 17th-18th century ki pauranik v aitihasik bhittichitron (wall paintings) ke liye prasiddh hai.
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                            <span>🎨 Amazing Historical Murals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Travel Tips & Budget Block -->
+                <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 text-indigo-950">
+                    <h4 class="text-xl font-bold mb-3 flex items-center gap-2">
+                        <span>💡</span>
+                        <span>Travel Tips & Budget Guide (यात्रा सलाह)</span>
+                    </h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm leading-relaxed">
+                        <div>
+                            <strong>Kab Jayein (Best Time):</strong> October se March ke beech mausam bahut suhavna rehta hai.
+                        </div>
+                        <div>
+                            <strong>Rukna & Khana:</strong> Betwa tat ke paas saste homestay, budget hotel aur swadisht bundeli vyanjan asani se mil jaate hain.
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Gallery Section -->
         <section id="gallery" class="scroll-mt-20">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">गैलरी (Gallery)</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">Gallery (गैलरी)</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=500&q=80" alt="Mountains" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
                 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Landscape" class="rounded-lg shadow object-cover h-40 w-full hover:scale-105 transition duration-300">
@@ -66,74 +180,44 @@
         <!-- About Us Section -->
         <section id="about" class="bg-gradient-to-br from-indigo-50 to-white p-6 md:p-10 rounded-2xl shadow-sm border border-indigo-100 scroll-mt-20">
             <div class="max-w-3xl">
-                <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-100 px-3 py-1 rounded-full">हमारे बारे में</span>
-                <h2 class="text-3xl font-extrabold text-gray-900 mt-3 mb-4">सफर आपका, सही मार्गदर्शन हमारा 🏔️✨</h2>
+                <span class="text-xs font-bold text-indigo-600 tracking-widest uppercase bg-indigo-100 px-3 py-1 rounded-full">Humare Baare Me</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 mt-3 mb-4">Safar aapka, sahi margdarshan humara 🏔️✨</h2>
                 <p class="text-gray-700 text-base leading-relaxed mb-6">
-                    स्वागत है <strong>Your Tour Guide</strong> में! हम मानते हैं कि यात्रा सिर्फ एक जगह से दूसरी जगह जाना नहीं, बल्कि नए अनुभवों और अविस्मरणीय यादों को संजोना है। 
+                    Swagat hai <strong>Your Tour Guide</strong> me! Hum maante hain ki yatra sirf ek jagah se doosri jagah jana nahi, balki naye anubhavon aur avismarniya yaadon ko sanjona hai.
                 </p>
-                <p class="text-gray-600 text-sm md:text-base leading-relaxed mb-8">
-                    चाहे पहाड़ों की शांत वादियां हों, पवित्र तीर्थ स्थल हों या अनछुपे हुए खूबसूरत टूरिस्ट स्पॉट्स—हम आपके लिए लाते हैं एकदम सटीक रोडमैप, असली ट्रैवेल टिप्स, होटल बुकिंग सलाह और बजट फ्रेंडली गाइड्स।
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 border-t border-indigo-100">
-                    <div class="flex items-start space-x-3">
-                        <div class="p-2 bg-indigo-600 text-white rounded-lg text-lg">📍</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800 text-sm">सटीक जानकारी</h4>
-                            <p class="text-xs text-gray-500 mt-0.5">बिना किसी भ्रम के आसान और रियल गाइड्स।</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="p-2 bg-indigo-600 text-white rounded-lg text-lg">💰</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800 text-sm">बजट-फ्रेंडली प्लान</h4>
-                            <p class="text-xs text-gray-500 mt-0.5">कम खर्च में बेहतरीन यात्रा का अनुभव।</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-3">
-                        <div class="p-2 bg-indigo-600 text-white rounded-lg text-lg">⛺</div>
-                        <div>
-                            <h4 class="font-bold text-gray-800 text-sm">ऑफबीट डेस्टिनेशन</h4>
-                            <p class="text-xs text-gray-500 mt-0.5">भारत की छुपी हुई खूबसूरत जगहों की खोज।</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">संपर्क करें (Contact Us)</h2>
-            
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-indigo-600 pb-2 inline-block">Sampark Karein (Contact Us)</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Netlify Form -->
                 <form name="contact" method="POST" data-netlify="true" class="space-y-4">
                     <input type="hidden" name="form-name" value="contact" />
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">आपका नाम</label>
-                        <input type="text" name="name" required placeholder="अपना नाम लिखें" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Aapka Naam</label>
+                        <input type="text" name="name" required placeholder="Apna naam likhein" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">ईमेल</label>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                         <input type="email" name="email" required placeholder="example@email.com" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">संदेश</label>
-                        <textarea name="message" rows="4" required placeholder="अपना सवाल या संदेश यहाँ लिखें..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Sandesh</label>
+                        <textarea name="message" rows="4" required placeholder="Apna sawal ya sandesh yahan likhein..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow">संदेश भेजें</button>
+                    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow">Sandesh Bhejein</button>
                 </form>
 
-                <!-- WhatsApp Direct Chat -->
                 <div class="bg-green-50 p-6 rounded-xl border border-green-200 flex flex-col justify-between">
                     <div>
-                        <h3 class="text-xl font-bold text-green-900 mb-2">तुरंत सहायता के लिए 👋</h3>
+                        <h3 class="text-xl font-bold text-green-900 mb-2">Turant Sahayata Ke Liye 👋</h3>
                         <p class="text-sm text-green-800 leading-relaxed mb-6">
-                            अगर आपका कोई सवाल है या आप तुरंत यात्रा की जानकारी चाहते हैं, तो सीधे हमारे WhatsApp पर मैसेज कर सकते हैं!
+                            Agar aapka koi sawal hai ya aap turant yatra ki jaankari chahte hain, toh seedhe humare WhatsApp par message kar sakte hain!
                         </p>
                     </div>
-                    <a href="https://wa.me/919411255003?text=Hello!%20Mujhe%20Tour%20Guide%20ke%20bare%20me%20jaankari%20chahiye." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition shadow-lg">
-                        <span>💬 WhatsApp पर मैसेज करें</span>
+                    <a href="https://wa.me/919411255003?text=Hello!%20Mujhe%20Orchha%20Tour%20Guide%20ke%20bare%20me%20jaankari%20chahiye." target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center space-x-2 transition shadow-lg">
+                        <span>💬 WhatsApp Par Message Karein</span>
                     </a>
                 </div>
             </div>
@@ -141,9 +225,8 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm mt-12">
-        <p>© 2026 Your Tour Guide. सर्वाधिकार सुरक्षित।</p>
+        <p>© 2026 Your Tour Guide. All rights reserved.</p>
     </footer>
 
 </body>
